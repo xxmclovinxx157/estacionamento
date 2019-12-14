@@ -1,0 +1,26 @@
+architecture h_fogolivre of fogolivre is 
+begin
+ process (clock)
+ variable contagem: integer range 0 to 4;
+ begin 
+  
+  if clock'event and b1='1' then
+  
+  contagem:= contagem +1; 
+  
+  elsif clock'event and b2='1' then
+  
+  contagem:= contagem -1;
+  
+  end if; 
+ 
+ q <= conv_std_logic_vector(contagem, 2); 
+ 
+end process; 
+end h_fogolivre;	
+
+
+
+
+
+
